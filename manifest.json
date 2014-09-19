@@ -1,0 +1,22 @@
+{
+  "name": "Ding",
+  "manifest_version": 2,
+  "description": "订餐",
+  "version": "1.0",
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {   
+      "matches": ["https://jinshuju.net/f/euwlb5"],
+      "js": ["page.js"]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
