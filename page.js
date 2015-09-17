@@ -17,7 +17,7 @@
     return document[fn](selector.slice(1)) || []
   }
 
-  $('#submission_password').value = '9527';
+  $('#submission_password').value = '123456';
   $('.btn-primary')[0].click();
   chrome.storage.local.get('dingName', function (item) {
     var isNum = !/\D/.test(item.dingName);
@@ -28,9 +28,8 @@
       var num = getItem('num');
       num = num + 1;
       setItem('num', num);
-      document.forms['new_entry']['entry[field_1]'].value = list[num % list.length].name;
-      document.forms['new_entry']['entry[field_9]'].value = 'RJfx';
-      document.forms['new_entry']['entry[field_10]'].value = list[num % list.length].department;
+      document.forms['new_entry']['entry[field_9]'].value = list[num % list.length].name;
+      document.forms['new_entry']['entry[field_5]'].value = list[num % list.length].department;
       var filter = list[num % list.length].filter;
       if (filter && filter.indexOf(date.getDay()) < 0) return;
       $('.submit').length && $('.submit')[0].click();

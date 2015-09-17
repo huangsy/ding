@@ -24,13 +24,13 @@
       var timer = setInterval(function () {
         if (--val <= 0) clearInterval(timer);
         chrome.tabs.create({
-          url: 'https://jinshuju.net/f/euwlb5'
+            url: 'https://jinshuju.net/f/7KN7gy'
         });
       }, 1000);
     } else {
       chrome.storage.local.set({'dingName': val});
       chrome.tabs.create({
-        url: 'https://jinshuju.net/f/euwlb5'
+          url: 'https://jinshuju.net/f/7KN7gy'
       });
     }
   }
@@ -45,7 +45,7 @@
     var date = new Date();
     var today = date.toLocaleDateString();
     var dingDate = localStorage.getItem('dingDate');
-    if (dingDate !== today && date.getDay() >= 0 && date.getDay() < 6 && date.getHours() > 5 && date.getHours() < 12) {
+    if (dingDate !== today && date.getDay() > 0 && date.getDay() < 6 && date.getHours() > 5 && date.getHours() < 12) {
       open(window.__list__.length);
       localStorage.setItem('dingDate', today);
     }
