@@ -1,0 +1,8 @@
+callback([
+    { name: '黄诗喻', department: '拍卖' },
+    { name: '赵达', department: '拍卖' },
+    { name: '汪红霞', department: '拍卖', filter: '345' },
+    { name: '闫玉洁', department: '拍卖', filter: '345' },
+    { name: '胡静', department: '拍卖', filter: '345' },
+    { name: '索曼丽', department: '拍卖' }
+]);
